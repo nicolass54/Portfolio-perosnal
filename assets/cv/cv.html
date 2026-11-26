@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Esteban González | Full Stack Developer</title>
+  <style>
+    :root {
+      --primary: #000000;
+      --dark: #111111;
+      --text: #262626;
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 30px 20px;
+    }
+    .cv-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    .header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .name-title h1 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+    .name-title h2 {
+      font-size: 16px;
+      color: #555555;
+      font-weight: 600;
+    }
+    .contact-info {
+      font-size: 13px;
+      text-align: right;
+    }
+    .contact-info p { margin-bottom: 3px; }
+    .contact-info a { color: #000000; text-decoration: underline; font-weight: 500; }
+    .section {
+      margin-bottom: 25px;
+    }
+    .section-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--primary);
+      display: inline-block;
+      margin-bottom: 12px;
+      padding-bottom: 2px;
+      font-weight: 700;
+    }
+    .item {
+      margin-bottom: 15px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 14.5px;
+    }
+    .item-sub {
+      color: #555555;
+      font-size: 13px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .item-desc {
+      font-size: 13.5px;
+      color: #404040;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .skill-category {
+      background: #fafafa;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      border: 1px solid var(--border);
+    }
+    .skill-category strong {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .actions {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn-print {
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #000000;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-print:hover { background: #333333; }
+    @media print {
+      body { background: white; padding: 0; }
+      .cv-container { box-shadow: none; border: none; padding: 0; width: 100%; max-width: 100%; }
+      .actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <div class="header">
+      <div class="name-title">
+        <h1>Esteban González</h1>
+        <h2>Desarrollador Full Stack &amp; Software Engineer</h2>
+        <p style="font-size: 13px; color: #666666; margin-top: 5px;">React, Node.js, TypeScript e Integración con Inteligencia Artificial</p>
+      </div>
+      <div class="contact-info">
+        <p>📍 Buenos Aires, Argentina (Disponible Remoto)</p>
+        <p>📞 <a href="https://wa.me/5491128658563" target="_blank">+54 9 11 2865-8563</a></p>
+        <p>📧 <a href="mailto:estebangonzalezyt@gmail.com">estebangonzalezyt@gmail.com</a></p>
+        <p>🎮 Discord: <strong>772297081121407007</strong></p>
+        <p>💻 <a href="https://github.com" target="_blank">GitHub</a></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Perfil Profesional</h3>
+      <p class="item-desc">
+        Desarrollador Full Stack enfocado en construir experiencias web de alto rendimiento, código limpio y escalabilidad. Práctica con el ecosistema JavaScript / TypeScript (React, Next.js, Node.js, Express), integraciones con APIs REST, bases de datos SQL y NoSQL, y metodologías ágiles. Enfoque moderno impulsado por Inteligencia Artificial para acelerar el desarrollo y mantener un estándar de calidad riguroso.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Formación Académica</h3>
+      <div class="item">
+        <div class="item-header">
+          <span>Tecnicatura / Grado en Programación y Sistemas</span>
+          <span>2022 — 2025</span>
+        </div>
+        <div class="item-sub">Universidad / Instituto Tecnológico Superior</div>
+        <div class="item-desc">Algoritmos, Estructuras de Datos, Patrones de Diseño, Bases de Datos Relacionales (SQL) y Arquitectura de Software.</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Bootcamp Intensivo Full Stack Web Developer</span>
+          <span>2024</span>
+        </div>
+        <div class="item-sub">Especialización Práctica (800+ Horas de Código)</div>
+        <div class="item-desc">Desarrollo de proyectos punta a punta con React, Node.js, PostgreSQL, Docker y despliegue continuo en la nube (GitHub Pages / Vercel).</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Habilidades Técnicas (%)</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Frontend (80%)</strong>
+          JavaScript ES6+, TypeScript, React, Next.js, HTML5, CSS3, Tailwind CSS, Responsive Web Design.
+        </div>
+        <div class="skill-category">
+          <strong>Backend &amp; APIs (78%)</strong>
+          Node.js, Express, REST APIs, WebSockets, Python, Autenticación JWT / OAuth 2.0.
+        </div>
+        <div class="skill-category">
+          <strong>Bases de Datos &amp; DevOps (76%)</strong>
+          PostgreSQL, MongoDB, Supabase, Docker básico, Git, GitHub Actions, GitHub Pages.
+        </div>
+        <div class="skill-category">
+          <strong>Metodologías &amp; IA (80%)</strong>
+          Clean Code, Scrum / Metodologías Ágiles, Pair Programming con IA (Copilot, Cursor), Testing con Jest.
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Proyectos Destacados</h3>
+      <div class="item">
+        <div class="item-header">
+          <span>DevFlow AI — Workspace Inteligente</span>
+          <span>Full Stack + AI</span>
+        </div>
+        <div class="item-sub">React 19, TypeScript, OpenAI API, Tailwind CSS</div>
+        <div class="item-desc">Plataforma web con asistencia por IA para refactorización de código, auditoría de vulnerabilidades y generación de pruebas unitarias.</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>NovaStore 3D — Plataforma E-Commerce</span>
+          <span>Frontend / WebGL</span>
+        </div>
+        <div class="item-sub">Three.js, React, WebGL, Stripe Checkout</div>
+        <div class="item-desc">Tienda interactiva con visualización 3D en tiempo real a 60 FPS y personalización de productos.</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>OmniTask SaaS — Gestión Ágil en Tiempo Real</span>
+          <span>Full Stack</span>
+        </div>
+        <div class="item-sub">Node.js, Express, PostgreSQL, Socket.io</div>
+        <div class="item-desc">Tableros Kanban sincronizados en tiempo real mediante WebSockets y gestión colaborativa de sprints.</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-print" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
+    </div>
+  </div>
+
+</body>
+</html>

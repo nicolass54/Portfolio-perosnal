@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p6-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061c24"/>
+      <stop offset="100%" stop-color="#0f2b36"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#p6-bg)" rx="16"/>
+  <rect width="800" height="42" fill="#04141a" rx="16"/>
+  <rect y="30" width="800" height="12" fill="#04141a"/>
+  <circle cx="25" cy="21" r="6" fill="#ef4444"/>
+  <circle cx="45" cy="21" r="6" fill="#eab308"/>
+  <circle cx="65" cy="21" r="6" fill="#22c55e"/>
+  <text x="95" y="26" fill="#2dd4bf" font-family="monospace" font-size="13">healthconnect.med // WebRTC Video &amp; E-Prescription Portal</text>
+
+  <!-- Split Screen: Video Consultation & Medical Record -->
+  <rect x="30" y="65" width="460" height="400" rx="10" fill="#0c2530" stroke="#134e4a"/>
+  <!-- Video Mockup -->
+  <rect x="45" y="80" width="430" height="260" rx="8" fill="#04141a"/>
+  <circle cx="260" cy="180" r="45" fill="#134e4a"/>
+  <text x="245" y="190" fill="#2dd4bf" font-family="sans-serif" font-size="30">👨‍⚕️</text>
+  <rect x="340" y="230" width="120" height="90" rx="6" fill="#0c2530" stroke="#2dd4bf"/>
+  <text x="385" y="285" fill="#f8fafc" font-family="sans-serif" font-size="20">🧑‍💻</text>
+  <!-- Controls Bar -->
+  <rect x="150" y="300" width="220" height="30" rx="15" fill="#134e4a" opacity="0.9"/>
+  <text x="175" y="320" fill="#ffffff" font-family="sans-serif" font-size="14">🎤  📹  🖥️  🛑</text>
+
+  <text x="50" y="375" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold">Consulta en Vivo WebRTC E2E</text>
+  <text x="50" y="398" fill="#99f6e4" font-family="sans-serif" font-size="12">Encriptación de punto a punto &amp; Grabación segura HIPAA Compliant</text>
+  <text x="50" y="420" fill="#5eead4" font-family="sans-serif" font-size="11">✓ WebSockets + WebRTC Mesh + Next.js App Router</text>
+
+  <!-- Right side: Patient record -->
+  <rect x="505" y="65" width="265" height="400" rx="10" fill="#0c2530" stroke="#134e4a"/>
+  <text x="525" y="100" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold">Ficha Médica Digital</text>
+  <text x="525" y="125" fill="#99f6e4" font-family="sans-serif" font-size="11">Paciente: Alex Johnson (ID #8921)</text>
+
+  <rect x="520" y="145" width="235" height="60" rx="6" fill="#134e4a" opacity="0.5"/>
+  <text x="530" y="170" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">Prescripción Firmada</text>
+  <text x="530" y="190" fill="#2dd4bf" font-family="monospace" font-size="10">Hash: 0x8f2a...c39e</text>
+
+  <rect x="520" y="220" width="235" height="150" rx="6" fill="#134e4a" opacity="0.5"/>
+  <text x="530" y="245" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">Próximos Turnos:</text>
+  <text x="530" y="270" fill="#e2e8f0" font-family="sans-serif" font-size="10">• 15:30 - Cardiología</text>
+  <text x="530" y="295" fill="#e2e8f0" font-family="sans-serif" font-size="10">• 16:45 - Nutrición</text>
+  <text x="530" y="320" fill="#e2e8f0" font-family="sans-serif" font-size="10">• 18:00 - Seguimiento</text>
+  <text x="530" y="350" fill="#34d399" font-family="sans-serif" font-size="10">✓ Google Calendar Sync OK</text>
+
+  <rect x="520" y="390" width="235" height="45" rx="6" fill="#0d9488"/>
+  <text x="545" y="418" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Finalizar Sesión &amp; Receta</text>
+</svg>

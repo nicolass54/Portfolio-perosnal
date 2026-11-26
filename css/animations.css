@@ -1,0 +1,95 @@
+/**
+ * Animations & Keyframes for Programmer Themed Portfolio
+ */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--accent-glow), 0 0 10px var(--accent-color);
+  }
+}
+
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes terminalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Reusable animation utility classes */
+.pulse-on-hover:hover {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.float-anim {
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+.float-anim-delay-1 {
+  animation: floatBadge 4.5s ease-in-out 0.5s infinite;
+}
+
+.float-anim-delay-2 {
+  animation: floatBadge 5s ease-in-out 1s infinite;
+}
+
+.cursor-blink {
+  animation: blinkCursor 0.9s infinite;
+}
+
+.scanner-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  opacity: 0.7;
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+}

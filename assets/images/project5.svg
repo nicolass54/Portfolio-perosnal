@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p5-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="chart-green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#p5-bg)" rx="16"/>
+  <rect width="800" height="42" fill="#111827" rx="16"/>
+  <rect y="30" width="800" height="12" fill="#111827"/>
+  <circle cx="25" cy="21" r="6" fill="#ef4444"/>
+  <circle cx="45" cy="21" r="6" fill="#eab308"/>
+  <circle cx="65" cy="21" r="6" fill="#22c55e"/>
+  <text x="95" y="26" fill="#38bdf8" font-family="monospace" font-size="13">cryptopulse.io // Live Candlestick &amp; Orderbook Engine</text>
+
+  <!-- Metric Badges -->
+  <g transform="translate(30, 60)">
+    <rect width="170" height="60" rx="8" fill="#1e293b"/>
+    <text x="15" y="25" fill="#94a3b8" font-family="sans-serif" font-size="11">BTC/USDT</text>
+    <text x="15" y="48" fill="#22c55e" font-family="sans-serif" font-size="16" font-weight="bold">$94,850.20 (+4.8%)</text>
+  </g>
+  <g transform="translate(220, 60)">
+    <rect width="170" height="60" rx="8" fill="#1e293b"/>
+    <text x="15" y="25" fill="#94a3b8" font-family="sans-serif" font-size="11">ETH/USDT</text>
+    <text x="15" y="48" fill="#22c55e" font-family="sans-serif" font-size="16" font-weight="bold">$3,620.40 (+6.1%)</text>
+  </g>
+  <g transform="translate(410, 60)">
+    <rect width="170" height="60" rx="8" fill="#1e293b"/>
+    <text x="15" y="25" fill="#94a3b8" font-family="sans-serif" font-size="11">SOL/USDT</text>
+    <text x="15" y="48" fill="#38bdf8" font-family="sans-serif" font-size="16" font-weight="bold">$218.75 (+2.4%)</text>
+  </g>
+  <g transform="translate(600, 60)">
+    <rect width="170" height="60" rx="8" fill="#1e293b"/>
+    <text x="15" y="25" fill="#94a3b8" font-family="sans-serif" font-size="11">WEBSOCKET STATUS</text>
+    <text x="15" y="48" fill="#10b981" font-family="sans-serif" font-size="15" font-weight="bold">🟢 CONNECTED (12ms)</text>
+  </g>
+
+  <!-- Big Interactive Chart Mockup -->
+  <rect x="30" y="135" width="520" height="330" rx="8" fill="#0d131f" stroke="#1f293d"/>
+  <path d="M40 380 L100 340 L160 360 L220 290 L280 310 L340 240 L400 260 L460 190 L520 170" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M40 380 L100 340 L160 360 L220 290 L280 310 L340 240 L400 260 L460 190 L520 170 L520 430 L40 430 Z" fill="url(#chart-green)"/>
+  <!-- Candles -->
+  <line x1="220" y1="270" x2="220" y2="330" stroke="#10b981" stroke-width="1"/>
+  <rect x="215" y="280" width="10" height="30" fill="#10b981"/>
+  <line x1="340" y1="220" x2="340" y2="280" stroke="#10b981" stroke-width="1"/>
+  <rect x="335" y="230" width="10" height="30" fill="#10b981"/>
+  <text x="50" y="170" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">Realtime 1s Depth Chart</text>
+  <text x="50" y="190" fill="#64748b" font-family="sans-serif" font-size="11">Data stream powered by Binance &amp; Coinbase WebSockets</text>
+
+  <!-- Order Book Mockup -->
+  <rect x="565" y="135" width="205" height="330" rx="8" fill="#0d131f" stroke="#1f293d"/>
+  <text x="580" y="165" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="bold">Live Order Book</text>
+  <text x="580" y="195" fill="#ef4444" font-family="monospace" font-size="11">94,860.50  |  1.42 BTC</text>
+  <text x="580" y="220" fill="#ef4444" font-family="monospace" font-size="11">94,858.20  |  0.88 BTC</text>
+  <text x="580" y="245" fill="#ef4444" font-family="monospace" font-size="11">94,855.00  |  3.15 BTC</text>
+  <line x1="580" y1="260" x2="750" y2="260" stroke="#334155"/>
+  <text x="580" y="285" fill="#22c55e" font-family="monospace" font-size="11">94,849.00  |  2.64 BTC</text>
+  <text x="580" y="310" fill="#22c55e" font-family="monospace" font-size="11">94,845.30  |  5.12 BTC</text>
+  <text x="580" y="335" fill="#22c55e" font-family="monospace" font-size="11">94,840.10  |  0.95 BTC</text>
+  
+  <rect x="580" y="390" width="175" height="45" rx="6" fill="#1e293b"/>
+  <text x="590" y="415" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold">Latency: 8ms P2P</text>
+  <text x="590" y="428" fill="#94a3b8" font-family="sans-serif" font-size="9">Canvas 2D Hardware Accel</text>
+</svg>

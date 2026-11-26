@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;Esteban.dev /&gt; | Full Stack Developer</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Portfolio de Desarrollador Full Stack con temática de programador en blanco y negro, proyectos reales, formación académica y habilidades técnicas.">
+  <meta name="keywords" content="Desarrollador Full Stack, Programador, React, Node.js, TypeScript, Portfolio, Web Developer, GitHub">
+  <meta name="author" content="Esteban - Full Stack Developer">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Esteban | Full Stack Developer">
+  <meta property="og:description" content="Portfolio con temática de programador en blanco y negro, animaciones y proyectos.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Canvas for Monochrome Particles Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ==================== IDE NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-tag">&lt;Esteban.dev /&gt;</span>
+      </a>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="#sobre-mi"><span class="nav-idx">// 01.</span> Sobre Mí</a></li>
+        <li class="nav-item"><a href="#formacion"><span class="nav-idx">// 02.</span> Formación</a></li>
+        <li class="nav-item"><a href="#habilidades"><span class="nav-idx">// 03.</span> Habilidades (%)</a></li>
+        <li class="nav-item"><a href="#proyectos"><span class="nav-idx">// 04.</span> Proyectos</a></li>
+        <li class="nav-item"><a href="#video-pitch"><span class="nav-idx">// 05.</span> Video Presentación</a></li>
+        <li class="nav-item"><a href="#publico-objetivo"><span class="nav-idx">// 06.</span> Enfoque</a></li>
+        <li class="nav-item"><a href="#contacto"><span class="nav-idx">// 07.</span> Contacto</a></li>
+      </ul>
+
+      <!-- Navbar Actions (CV & Mobile Menu) -->
+      <div class="nav-actions">
+        <!-- CV Modal Trigger -->
+        <button class="btn-nav-cv open-cv-btn" title="Ver y Descargar CV">
+          📄 CV
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Abrir Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Hola, soy <span class="text-white">Esteban</span>.<br>
+          <span class="typing-wrapper">&gt; <span id="typing-text"></span><span class="cursor-blink">|</span></span>
+        </h1>
+
+        <p class="hero-desc">
+          Construyo experiencias web de alto impacto, combinando código limpio, arquitectura escalable y aceleración moderna con Inteligencia Artificial. Transformo requerimientos complejos en interfaces elegantes y sistemas fiables.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#proyectos" class="btn-primary">
+            <span>Ver Proyectos</span>
+          </a>
+          <a href="https://wa.me/5491128658563?text=Hola%20Esteban,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" class="btn-secondary">
+            <span>WhatsApp Directo</span>
+          </a>
+        </div>
+
+        <!-- Quick Access Social Row -->
+        <div class="hero-social-bar">
+          <span class="hero-social-label">Acceso Directo:</span>
+          <a href="https://github.com" target="_blank" class="social-pill" title="GitHub">
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:estebangonzalezyt@gmail.com" class="social-pill" title="Enviar Email">
+            <span>estebangonzalezyt@gmail.com</span>
+          </a>
+          <button class="social-pill" id="copy-discord-btn" data-discord="772297081121407007" title="Discord (Click para copiar)">
+            <span>Discord: 772297081121407007</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Developer Window & Avatar Showcase -->
+      <div class="hero-code-window float-anim">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="dot dot-white"></span>
+            <span class="dot dot-gray"></span>
+            <span class="dot dot-darkgray"></span>
+          </div>
+          <span class="window-filename">perfil_desarrollador.ts — TypeScript</span>
+          <span class="text-white mono-font" style="font-size: 0.75rem;">UTF-8</span>
+        </div>
+
+        <div class="hero-avatar-wrapper">
+          <img src="assets/images/esteban.png" alt="Esteban Nicolás González" class="avatar-img">
+        </div>
+
+        <div class="code-snippet-box">
+          <p><span class="text-dim">interface</span> <span class="text-white">DesarrolladorFullStack</span> {</p>
+          <p>&nbsp;&nbsp;nombre: <span class="text-highlight">'Esteban'</span>;</p>
+          <p>&nbsp;&nbsp;rol: <span class="text-highlight">'Ingeniero de Software &amp; Desarrollador Full Stack'</span>;</p>
+          <p>&nbsp;&nbsp;stackPrincipal: [<span class="text-highlight">'React'</span>, <span class="text-highlight">'Node.js'</span>, <span class="text-highlight">'TypeScript'</span>, <span class="text-highlight">'SQL/NoSQL'</span>];</p>
+          <p>&nbsp;&nbsp;enfoque: <span class="text-white">'+ Productividad con IA, - Fricción'</span>;</p>
+          <p>&nbsp;&nbsp;estado: <span class="text-highlight">'Listo para crear soluciones de alto impacto'</span>;</p>
+          <p>}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VIDEO PRESENTACIÓN SECTION ==================== -->
+  <!-- Inline video with explanatory text -->
+  <section class="section section-alt" id="video-pitch">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 05. Video Presentación</p>
+        <h2 class="section-title">Conóceme en <span class="text-white">60 Segundos</span></h2>
+        <p class="section-subtitle">Una presentación personal directa: quién soy, mi metodología de trabajo y cómo puedo aportar valor tangible a tu equipo o proyecto.</p>
+      </div>
+
+      <div class="video-section-card">
+        <!-- Direct Inline Video Player -->
+        <div class="video-player-inline-wrapper">
+          <div class="video-responsive-container">
+            <video class="video-inline-element" controls preload="metadata">
+              <source src="img y vid/video.mp4" type="video/mp4">
+              Tu navegador no soporta reproducción de video HTML5.
+            </video>
+            <div class="video-badge-overlay">
+              <span>Video Pitch Full HD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Highlights Content -->
+        <div class="video-info-content">
+          <h3 class="video-info-title">Puntos clave del Video</h3>
+          <ul class="video-highlights-list">
+            <li>
+              <span class="highlight-icon">✓</span>
+              <span><strong>00:00 - Introducción:</strong> Mi historia en tecnología, pasión por el desarrollo de software y formación académica.</span>
+            </li>
+            <li>
+              <span class="highlight-icon">✓</span>
+              <span><strong>00:30 - Stack Técnico &amp; IA:</strong> Dominio de frontend moderno, APIs REST, bases de datos y desarrollo acelerado con IA.</span>
+            </li>
+            <li>
+              <span class="highlight-icon">✓</span>
+              <span><strong>00:45 - Casos de Éxito:</strong> Resolución de problemas reales de arquitectura y despliegues en producción.</span>
+            </li>
+            <li>
+              <span class="highlight-icon">✓</span>
+              <span><strong>01:00 - Disponibilidad:</strong> Apertura para proyectos freelance, startups o contratación full-time.</span>
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://wa.me/5491128658563?text=Hola%20Esteban,%20vi%20tu%20video%20de%20presentacion" target="_blank" class="btn-primary">
+              WhatsApp Directo
+            </a>
+            <a href="#contacto" class="btn-secondary">
+              Enviar Mensaje
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOBRE MÍ ==================== -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 01. Sobre Mí</p>
+        <h2 class="section-title">Código Limpio, Pasión &amp; <span class="text-white">Resultados</span></h2>
+        <p class="section-subtitle">Comprometido con la excelencia técnica, la arquitectura modular y la entrega continua.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            ¡Hola! Soy desarrollador Full Stack con base en Argentina y disponibilidad para trabajar en modalidad remota con equipos de todo el mundo.
+          </p>
+          <p>
+            Mi viaje en el desarrollo de software comenzó con una curiosidad insaciable por entender cómo los sistemas resuelven problemas del mundo real. Hoy en día, diseño y desarrollo aplicaciones web completas: desde interfaces intuitivas, accesibles y con animaciones fluidas, hasta APIs robustas, autenticación segura y modelos de datos eficientes.
+          </p>
+          <p>
+            <strong>Mi enfoque moderno: "+ IA - %"</strong>. Integro herramientas de Inteligencia Artificial en cada fase del ciclo de vida (análisis de código, tests automatizados, refactorizaciones y generación de documentación). Esto se traduce en <span class="text-white">+ Productividad</span> y <span class="text-white">- Tiempos de desarrollo / deuda técnica</span>, manteniendo siempre un 100% de criterio arquitectónico propio.
+          </p>
+          <p>
+            Disfruto colaborar en equipos multidisciplinarios, resolver desafíos de rendimiento y construir herramientas que aporten valor medible a los usuarios finales.
+          </p>
+        </div>
+
+        <!-- Terminal Inspector Box -->
+        <div class="about-terminal-box">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="dot dot-white"></span>
+              <span class="dot dot-gray"></span>
+              <span class="dot dot-darkgray"></span>
+            </div>
+            <span class="window-filename">bio_inspector.sh</span>
+            <span class="text-white mono-font" style="font-size: 0.75rem;">Bash</span>
+          </div>
+          <div style="padding: 24px; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+            <p><span class="text-white">$</span> cat &lt;&lt; 'EOF' &gt; desarrollador.json</p>
+            <p>{</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"nombre"</span>: <span class="text-highlight">"Esteban"</span>,</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"telefono"</span>: <span class="text-highlight">"+54 9 11 2865-8563"</span>,</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"email"</span>: <span class="text-highlight">"estebangonzalezyt@gmail.com"</span>,</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"discord"</span>: <span class="text-highlight">"772297081121407007"</span>,</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"ubicacion"</span>: <span class="text-highlight">"Buenos Aires, AR (Remoto Global)"</span>,</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"idiomas"</span>: [<span class="text-highlight">"Español (Nativo)"</span>, <span class="text-highlight">"Inglés (Técnico / B2)"</span>],</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"metodologia"</span>: <span class="text-highlight">"Scrum, Agile, Clean Architecture"</span>,</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"herramientas"</span>: [<span class="text-highlight">"VS Code"</span>, <span class="text-highlight">"Git"</span>, <span class="text-highlight">"Docker"</span>, <span class="text-highlight">"Postman"</span>],</p>
+            <p>&nbsp;&nbsp;<span class="text-white">"intereses"</span>: [<span class="text-highlight">"Cloud Computing"</span>, <span class="text-highlight">"AI Agents"</span>, <span class="text-highlight">"UI/UX Animado"</span>]</p>
+            <p>}</p>
+            <p>EOF</p>
+            <p style="margin-top: 10px;"><span class="text-white">$</span> echo "Perfil verificado y listo para nuevos retos."</p>
+            <p class="text-dim">&gt; [OK] Status 200 - Compilación exitosa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FORMACIÓN ACADÉMICA ==================== -->
+  <section class="section section-alt" id="formacion">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 02. Formación Académica</p>
+        <h2 class="section-title">Trayectoria &amp; <span class="text-white">Certificaciones</span></h2>
+        <p class="section-subtitle">Mi camino de formación formal, programas especializados y aprendizaje técnico continuo.</p>
+      </div>
+
+      <div class="timeline-tree">
+        <!-- Node 1 -->
+        
+        <!-- Node 2 -->
+        <div class="timeline-node">
+          <div class="timeline-commit-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Escuela de Educación Secundaria N° 36</h3>
+              <span class="timeline-date-badge">2020 — 2022</span>
+            </div>
+            <p class="timeline-sub">Educación Secundaria General</p>
+            <p class="timeline-desc">
+              Formación académica secundaria con buen desempeño, fortaleciendo el pensamiento lógico y la comunicación.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-commit-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Desarrollo Web &amp; Tecnologías Modernas</h3>
+              <span class="timeline-date-badge">2024 — 2026</span>
+            </div>
+            <p class="timeline-sub">HTML, CSS, JavaScript, MySQL, Python e Integración de IA</p>
+            <p class="timeline-desc">
+              Desarrollo de proyectos web responsivos, aplicaciones frontend interactivas, integración de bases de datos y aprovechamiento de herramientas de Inteligencia Artificial para optimizar flujos de código.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-commit-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Escuela Secundaria Técnica N° 5</h3>
+              <span class="timeline-date-badge">Cursando Actualmente</span>
+            </div>
+            <p class="timeline-sub">Especialización en Programación y Desarrollo de Software</p>
+            <p class="timeline-desc">
+              Formación sólida en desarrollo de software, lógica de programación, prototipado, metodologías ágiles, control de versiones (Git/GitHub) y modelado de bases de datos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 3 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HABILIDADES & SKILLS (%) ==================== -->
+  <!-- 4 cuadros alineados en una sola fila en escritorio, valores ajustados a 75% - 80% -->
+  <section class="section" id="habilidades">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 03. Habilidades Técnicas</p>
+        <h2 class="section-title">Skills &amp; Dominio <span class="text-white">Porcentual (%)</span></h2>
+        <p class="section-subtitle">Evaluación objetiva de mis competencias técnicas organizadas por capas de desarrollo.</p>
+      </div>
+
+      <div class="skills-container">
+        <!-- Frontend Card -->
+        <div class="skill-category-card">
+          <h3 class="category-title">Frontend</h3>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript (ES6+) / TS</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">React.js &amp; Next.js</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="78"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">HTML5 Semántico &amp; CSS3</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Tailwind CSS &amp; UI</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="78"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Responsive Design</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Card -->
+        <div class="skill-category-card">
+          <h3 class="category-title">Backend &amp; APIs</h3>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Node.js &amp; Express.js</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="78"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">APIs RESTful &amp; Endpoints</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="75"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Autenticación (JWT, OAuth)</span>
+              <span class="skill-pct">76%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="76"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Python Scripting</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="72"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases & Cloud Card -->
+        <div class="skill-category-card">
+          <h3 class="category-title">Bases de Datos &amp; DevOps</h3>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">PostgreSQL &amp; MySQL</span>
+              <span class="skill-pct">76%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="76"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">MongoDB &amp; Supabase</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="75"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Docker &amp; Contenedores</span>
+              <span class="skill-pct">74%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="74"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Git &amp; GitHub Actions</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">GitHub Pages &amp; Cloud</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Methodologies & AI Card -->
+        <div class="skill-category-card">
+          <h3 class="category-title">Metodologías &amp; IA</h3>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Pair Programming con IA</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Resolución de Problemas</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="80"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Metodologías Ágiles &amp; Scrum</span>
+              <span class="skill-pct">76%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="76"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Testing Unitario (Jest)</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="75"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Documentación Técnica</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-bar" data-percent="78"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROYECTOS SECTION ==================== -->
+  <!-- Sin filtros de búsqueda, solo imagen y texto -->
+  <section class="section section-alt" id="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 04. Proyectos Destacados</p>
+        <h2 class="section-title">Trabajos &amp; <span class="text-white">Arquitecturas</span></h2>
+        <p class="section-subtitle">Aplicaciones completas, desarrollo moderno y código limpio.</p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Proyecto 1: Rotisería -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project1_rotiseria.jpg" alt="Rotisería SYM Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Full Stack / QR</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Rotisería SYM — Pedidos &amp; QR</h3>
+            <p class="project-desc">
+              Sistema integral de gestión gastronómica y pedidos mediante código QR. Incluye panel administrativo completo para control de menú, categorías, gestión de precios, control de mesas y monitor de ventas en tiempo real.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">Panel Admin</span>
+              <span class="tech-badge">Render Cloud</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/sebasbel2007/Rotiseria_QR_Final.git" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-outline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Repositorio
+              </a>
+              <a href="https://Rotiseria-qr-final.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Notas Firebase -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project2_notas_firebase.jpg" alt="Notas Firebase Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Frontend / Cloud</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Notas Firebase — Mi Cuaderno</h3>
+            <p class="project-desc">
+              Aplicación web responsiva de gestión de notas y tareas personales ("Mi Cuaderno"). Incorpora autenticación de usuarios, almacenamiento cloud y sincronización instantánea de pendientes en tiempo real utilizando Google Firebase.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Firebase / Firestore</span>
+              <span class="tech-badge">CRUD</span>
+              <span class="tech-badge">GitHub Pages</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/nicolass54/notas-firebase" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-outline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Repositorio
+              </a>
+              <a href="https://nicolass54.github.io/notas-firebase/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 3: App Asistencias Automatizadas -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project3_asistencias.jpg" alt="Asistencias Automatizadas Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Gestión Institucional</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">App Asistencias Automatizadas</h3>
+            <p class="project-desc">
+              Plataforma para automatización y registro de asistencias escolares e institucionales. Permite registrar presentes, ausentes y tardanzas por curso y turno, calculando métricas porcentuales y resúmenes estadísticos automáticos por jornada.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Automatización</span>
+              <span class="tech-badge">Dashboard Escolar</span>
+              <span class="tech-badge">GitHub Pages</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/nicolass54/app-automatizacion-asistencias" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-outline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Repositorio
+              </a>
+              <a href="https://nicolass54.github.io/app-automatizacion-asistencias/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 4: Cursos MI -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project4_cursos_mi.jpg" alt="Cursos MI Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Servidor Cloud</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Cursos MI — Plataforma Educativa</h3>
+            <p class="project-desc">
+              Plataforma e-learning y venta de cursos de formación y oficios. Cuenta con catálogo categorizado, visualizador interactivo de temarios, validación de certificados y registro de alumnos.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Full Stack</span>
+              <span class="tech-badge">E-Learning</span>
+              <span class="tech-badge">Render Cloud</span>
+              <span class="tech-badge">Servidor Dedicado</span>
+            </div>
+            <div class="project-server-notice">
+              <span>⚡ Proyecto alojado en Servidor Cloud (Render) — Repositorio privado en servidor</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://cursosmi-vlj9.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" style="flex: 1 1 100%;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página del Proyecto
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto Físico 5: Sistema Control de Acceso Gimnasio -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project5_acceso_gimnasio.jpg" alt="Control de Acceso Gimnasio Preview" class="project-thumb-img">
+            <span class="project-badge-tag">🛠️ Proyecto Físico</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Sistema Control de Acceso Gimnasio</h3>
+            <p class="project-desc">
+              Prototipo funcional físico de control de acceso automatizado. Integra lector RFID para tarjetas de usuarios, teclado matricial numérico para clave de seguridad, pantalla LCD con mensajes dinámicos y servomotor para la barrera mecánica de paso.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Hardware Embebido</span>
+              <span class="tech-badge">Lector RFID</span>
+              <span class="tech-badge">Display LCD</span>
+              <span class="tech-badge">Servomotores</span>
+              <span class="tech-badge">C++ / Arduino</span>
+            </div>
+            <div class="project-physical-notice">
+              <span>🛠️ Proyecto Físico / Hardware — Prototipo funcional embebido</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 6: Puntos de Interés y Recorrido Berazategui -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project6_recorrido_berazategui.jpg" alt="Recorrido Berazategui Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Geolocalización / Mapas</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Puntos de Interés y Recorrido Berazategui</h3>
+            <p class="project-desc">
+              Guía interactiva municipal y turística de Berazategui orientada a vecinos y visitantes. Presenta mapas interactivos con geolocalización, trazado de recorridos, paradas de colectivos, frecuencias de transporte y datos históricos.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Geolocalización</span>
+              <span class="tech-badge">Mapbox API</span>
+              <span class="tech-badge">Turismo Urbano</span>
+              <span class="tech-badge">GitHub Pages</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/nicolass54/pagina-de-puntos-de-interes-y-recorrido-berazategui" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-outline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Repositorio
+              </a>
+              <a href="https://nicolass54.github.io/pagina-de-puntos-de-interes-y-recorrido-berazategui/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto Físico 7: AutoBot -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project7_autobot.jpg" alt="AutoBot TPR Preview" class="project-thumb-img">
+            <span class="project-badge-tag">🤖 Proyecto Físico</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AutoBot — TPR (Tu Primer Robot)</h3>
+            <p class="project-desc">
+              Vehículo robótico móvil diferencial diseñado para prácticas de robótica y cinemática. Cuenta con chasis modular liviano, ruedas motrices independientes acopladas a motorreductores DC, rueda loca estabilizadora y placa controladora embebida.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Robótica Móvil</span>
+              <span class="tech-badge">Tracción Diferencial</span>
+              <span class="tech-badge">Drivers Motores DC</span>
+              <span class="tech-badge">Microcontrolador</span>
+            </div>
+            <div class="project-physical-notice">
+              <span>🤖 Proyecto Físico / Robótica — Robot móvil autónomo</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 8: Viajes Los Choris -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project8_viajes_choris.jpg" alt="Viajes Los Choris Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Plataforma Web</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Viajes Los Choris</h3>
+            <p class="project-desc">
+              Plataforma e-commerce para reserva y compra de pasajes de micro de media y larga distancia. Dispone de un flujo de checkout con selección de butacas, desglose de impuestos y descuentos por compra anticipada, además de opción de cobertura de viaje.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">E-Commerce</span>
+              <span class="tech-badge">Booking / Pasajes</span>
+              <span class="tech-badge">UI/UX</span>
+              <span class="tech-badge">Web App</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://swear-boat-14797878.figma.site/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página 1 del Proyecto
+              </a>
+              <a href="https://snore-cot-47144311.figma.site/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página 2 del Proyecto
+              </a>
+            </div>
+          </div> 
+        </article>
+
+        <!-- Proyecto Físico 9: PerroBot -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project9_perrobot.jpg" alt="PerroBot Preview" class="project-thumb-img">
+            <span class="project-badge-tag">🐕 Proyecto Físico</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">PerroBot — Robot Cuadrúpedo</h3>
+            <p class="project-desc">
+              Cuadrúpedo robótico bioinspirado modelado y fabricado con tecnología de impresión 3D. Emplea múltiples servomotores independientes articulados en cada pata para el control cinemático de posturas, marcha coordinada y estabilidad dinámica.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Impresión 3D</span>
+              <span class="tech-badge">Cinemática Cuadrúpeda</span>
+              <span class="tech-badge">Servomotores</span>
+              <span class="tech-badge">Robótica Bioinspirada</span>
+            </div>
+            <div class="project-physical-notice">
+              <span>🐕 Proyecto Físico / Robótica — Cuadrúpedo articulado 3D</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 10: Moda Circular -->
+        <article class="project-card">
+          <div class="project-thumb-box">
+            <img src="assets/images/project10_moda_circular.jpg" alt="Moda Circular Preview" class="project-thumb-img">
+            <span class="project-badge-tag">Servidor Web</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Moda Circular — Ropero Escolar</h3>
+            <p class="project-desc">
+              Plataforma web comunitaria ("Ropero Escolar") orientada a la reutilización y reserva sustentable de indumentaria escolar y útiles. Ofrece catálogo online con buscador de talles, estado de disponibilidad de prendas en tiempo real y módulo de reservas.
+            </p>
+            <div class="project-tech-badges">
+              <span class="tech-badge">Web App</span>
+              <span class="tech-badge">Economía Circular</span>
+              <span class="tech-badge">InfinityFree Host</span>
+              <span class="tech-badge">Catálogo Interactivo</span>
+            </div>
+            <div class="project-server-notice">
+              <span>⚡ Proyecto alojado en Servidor Web (InfinityFree) — Repositorio privado en servidor</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://modacircular.infinityfreeapp.com/index.html?i=1" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" style="flex: 1 1 100%;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Ver Página del Proyecto
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PÚBLICO OBJETIVO & OBJETIVOS ==================== -->
+  <section class="section" id="publico-objetivo">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 06. Enfoque &amp; Propuesta de Valor</p>
+        <h2 class="section-title">Público Objetivo &amp; <span class="text-white">Metas</span></h2>
+        <p class="section-subtitle">¿A quién puedo ayudar y cómo resolvemos los desafíos técnicos actuales?</p>
+      </div>
+
+      <div class="target-grid">
+        <!-- Target 1: Startups -->
+        <div class="target-card">
+          <h3 class="target-title">Startups en Crecimiento</h3>
+          <p class="target-desc">
+            Construcción ágil de MVPs (Minimum Viable Products) listos para producción, testeables y con arquitectura limpia que no requerirá ser reescrita al momento de escalar.
+          </p>
+        </div>
+
+        <!-- Target 2: Empresas / Pymes -->
+        <div class="target-card">
+          <h3 class="target-title">Empresas &amp; Clientes Directos</h3>
+          <p class="target-desc">
+            Digitalización de operaciones, automatizaciones a medida, portales web de alta velocidad y optimización de flujos de clientes para aumentar conversiones.
+          </p>
+        </div>
+
+        <!-- Target 3: Tech Leads & Equipos -->
+        <div class="target-card">
+          <h3 class="target-title">Equipos de Desarrollo &amp; Tech Leads</h3>
+          <p class="target-desc">
+            Integración fluida desde el día uno: dominio estricto de Git, documentación exhaustiva, buenas prácticas de Clean Code, cobertura de tests y comunicación transparente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Professional Goal Milestone Box -->
+      <div class="goal-milestone-box">
+        <div>
+          <h3 class="goal-milestone-title">🎯 Objetivo Profesional &amp; Compromiso Técnico</h3>
+          <p class="goal-milestone-desc">
+            Mi meta es consolidar aplicaciones web robustas que integren herramientas modernas de desarrollo e Inteligencia Artificial, optimizando tiempos de entrega con máxima calidad de código.
+          </p>
+        </div>
+        <div class="milestone-badge">
+          Hosteado en GitHub Pages
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO & REDES ==================== -->
+  <section class="section section-alt" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">// 07. Contacto Multicanal</p>
+        <h2 class="section-title">Hablemos de tu <span class="text-white">Próximo Proyecto</span></h2>
+        <p class="section-subtitle">Respuestas rápidas en menos de 24 horas por el canal que prefieras.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Channels List with Real Data -->
+        <div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Canales de Comunicación Inmediata</h3>
+          <div class="contact-channels-list">
+            <!-- WhatsApp con número real: 1128658563 -->
+            <a href="https://wa.me/5491128658563?text=Hola%20Esteban,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" class="channel-btn-card">
+              <span class="channel-icon">💬</span>
+              <div>
+                <span class="channel-name">WhatsApp Directo</span>
+                <span class="channel-hint">+54 9 11 2865-8563</span>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" class="channel-btn-card">
+              <span class="channel-icon">🐙</span>
+              <div>
+                <span class="channel-name">GitHub</span>
+                <span class="channel-hint">Repositorios &amp; código</span>
+              </div>
+            </a>
+
+            <!-- Discord con ID real: 772297081121407007 -->
+            <button class="channel-btn-card" id="copy-discord-btn" data-discord="772297081121407007">
+              <span class="channel-icon">🎮</span>
+              <div>
+                <span class="channel-name">Discord ID</span>
+                <span class="channel-hint">772297081121407007 (Copiar)</span>
+              </div>
+            </button>
+
+            <!-- Email real: estebangonzalezyt@gmail.com -->
+            <button class="channel-btn-card" id="copy-email-btn" data-email="estebangonzalezyt@gmail.com">
+              <span class="channel-icon">📧</span>
+              <div>
+                <span class="channel-name">Email</span>
+                <span class="channel-hint">estebangonzalezyt@gmail.com</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- CV Download Promo Box -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 22px; margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 4px;">¿Necesitas mi CV impreso o en PDF?</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Disponible para reclutadores técnicos y departamentos de RRHH.</p>
+            </div>
+            <button class="btn-primary open-cv-btn" style="white-space: nowrap;">
+              📄 Abrir CV
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Form with Validation -->
+        <div class="contact-form-box">
+          <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Enviar un Mensaje Directo</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 22px;">Completa el formulario y se enviará la notificación de inmediato.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">&gt; Tu Nombre o Empresa *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Ej: María Gómez / Tech Solutions" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">&gt; Correo Electrónico *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="maria@ejemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-service" class="form-label">&gt; Tipo de Oportunidad</label>
+              <select id="form-service" class="form-select">
+                <option value="fullstack">Desarrollo Web Full Stack</option>
+                <option value="frontend">Desarrollo Frontend / React</option>
+                <option value="hiring">Contratación Full Time / Part Time</option>
+                <option value="consultancy">Consultoría Técnica / Asesoría</option>
+                <option value="other">Otro asunto</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">&gt; Mensaje o Requerimientos *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto, objetivos, plazos o propuesta..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-form-submit">
+              Enviar Mensaje (POST /api/contact)
+            </button>
+
+            <!-- Fast WhatsApp Button inside form -->
+            <button type="button" id="whatsapp-quick-btn" class="btn-secondary" style="width: 100%; margin-top: 10px; justify-content: center;">
+              💬 Enviar estos datos por WhatsApp directo
+            </button>
+
+            <div id="form-success-msg" class="form-success-banner">
+              ✓ Mensaje recibido correctamente. Me pondré en contacto contigo a la brevedad.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CV VIEWER MODAL ==================== -->
+  <div class="modal-overlay" id="cv-modal">
+    <div class="modal-box modal-box-cv">
+      <div class="modal-header">
+        <span class="mono-font text-white">📄 Curriculum Vitae — Esteban Nicolás González</span>
+        <button class="modal-close-btn" id="cv-modal-close" title="Cerrar ventana (ESC)">&times;</button>
+      </div>
+      <div class="modal-body cv-modal-body">
+        <div class="cv-modal-top-actions">
+          <p class="cv-modal-hint">Elige y descarga la versión que prefieras en alta definición (JPG):</p>
+          <div class="cv-quick-buttons">
+            <a href="assets/cv/cv_esteban_con_foto.jpg" download="CV_Esteban_Gonzalez_Con_Foto.jpg" class="btn-primary">
+              ⬇️ Descargar Con Foto
+            </a>
+            <a href="assets/cv/cv_esteban_sin_foto.jpg" download="CV_Esteban_Gonzalez_Sin_Foto.jpg" class="btn-secondary">
+              ⬇️ Descargar Sin Foto
+            </a>
+          </div>
+        </div>
+
+        <div class="cv-cards-grid">
+          <!-- Versión 1: Con Foto -->
+          <div class="cv-card-item">
+            <div class="cv-card-top">
+              <span class="cv-tag">📸 Versión con Foto</span>
+              <a href="assets/cv/cv_esteban_con_foto.jpg" download="CV_Esteban_Gonzalez_Con_Foto.jpg" class="btn-cv-download">
+                ⬇️ Descargar
+              </a>
+            </div>
+            <div class="cv-image-wrapper">
+              <a href="assets/cv/cv_esteban_con_foto.jpg" target="_blank" title="Click para ver en tamaño completo">
+                <img src="assets/cv/cv_esteban_con_foto.jpg" alt="Curriculum Vitae Esteban Nicolás González con foto" class="cv-modal-img">
+              </a>
+            </div>
+          </div>
+
+          <!-- Versión 2: Sin Foto -->
+          <div class="cv-card-item">
+            <div class="cv-card-top">
+              <span class="cv-tag">📄 Versión sin Foto</span>
+              <a href="assets/cv/cv_esteban_sin_foto.jpg" download="CV_Esteban_Gonzalez_Sin_Foto.jpg" class="btn-cv-download">
+                ⬇️ Descargar
+              </a>
+            </div>
+            <div class="cv-image-wrapper">
+              <a href="assets/cv/cv_esteban_sin_foto.jpg" target="_blank" title="Click para ver en tamaño completo">
+                <img src="assets/cv/cv_esteban_sin_foto.jpg" alt="Curriculum Vitae Esteban Nicolás González sin foto" class="cv-modal-img">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/matrix.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
